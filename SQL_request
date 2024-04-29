@@ -2,8 +2,8 @@
 
 SELECT Co.login,
        COUNT(Or."courierId") AS in_delivery
-FROM "Orders" AS Or
-JOIN "Couriers" AS Co
+FROM "Couriers" AS Co
+JOIN "Orders" AS Or
     ON Co.id = Or."courierId"
 WHERE Or."inDelivery" = true
 GROUP BY co.login;
